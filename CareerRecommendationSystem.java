@@ -31,7 +31,7 @@ public class CareerRecommendationSystem {
         if (average >= 85) {
             System.out.println("Recommended Career: Engineering / Data Science");
         } 
-        else if (average >= 70) {
+        else if (average > 70) {
             System.out.println("Recommended Career: Management / Commerce");
         } 
         else {
@@ -46,3 +46,4 @@ public class CareerRecommendationSystem {
         displayRecommendation(avg);          // function call 2
     }
 }
+
