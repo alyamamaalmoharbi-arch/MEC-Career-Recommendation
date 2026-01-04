@@ -1,22 +1,25 @@
-// Branch 1: Using while loop instead of for loop
-public static double calculateAverage() {
+// Branch 2: Adding extra career recommendation
+public static void displayRecommendation(double average) {
 
-    Scanner sc = new Scanner(System.in);
-    int n;
-    double total = 0, marks;
-    int i = 1; // loop counter
+    System.out.println("Average Marks: " + average);
 
-    System.out.print("Enter number of subjects: ");
-    n = sc.nextInt();
-
-    while (i <= n) { // modified loop
-        System.out.print("Enter marks for subject " + i + ": ");
-        marks = sc.nextDouble();
-        total += marks;
-        i++;
+    if (average >= 85) {
+        System.out.println("Recommended Career: Engineering / Data Science");
+    } 
+    else if (average >= 80) { // new branch
+        System.out.println("Recommended Career: Research / Analytics");
     }
+    else if (average >= 70) {
+        System.out.println("Recommended Career: Management / Commerce");
+    } 
+    else {
+        System.out.println("Recommended Career: Skill-based or Vocational Courses");
+    }
+}
+
 
     return total / n; // return average
 }
+
 
 
